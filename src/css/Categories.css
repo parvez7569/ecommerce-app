@@ -1,0 +1,125 @@
+.categories {
+  padding: 80px 8%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+/* Heading */
+.categories h2 {
+  color: black;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.categories h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #d4af37;
+  margin: 15px auto 0;
+  border-radius: 10px;
+}
+
+/* Grid */
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.category-card {
+  position: relative;
+  background: linear-gradient(145deg, #1c1c1c, #111111);
+  padding: 35px 20px;
+  border-radius: 18px;
+  border: 1px solid #292929;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Gold top line */
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d4af37;
+  transform: scaleX(0);
+  transition: 0.35s ease;
+}
+
+.category-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Hover */
+.category-card:hover {
+  transform: translateY(-10px);
+  border-color: #444;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Category name */
+.category-card h3 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.category-card button {
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  padding: 11px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.category-card button:hover {
+  background: #d4af37;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .category-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small tablet */
+@media (max-width: 750px) {
+  .category-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories {
+    padding: 60px 5%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+
+  .categories h2 {
+    font-size: 28px;
+  }
+}

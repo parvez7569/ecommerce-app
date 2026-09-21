@@ -1,0 +1,145 @@
+.checkout-page {
+  padding: 50px 8%;
+  background: #f4f4f4;
+  min-height: 100vh;
+}
+
+.checkout-page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.checkout-form,
+.order-summary {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-form h2,
+.order-summary h2 {
+  margin-bottom: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.checkout-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.checkout-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-options label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.payment-options input {
+  width: auto;
+  margin-right: 8px;
+}
+
+.place-order-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #111;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background: #333;
+}
+
+.summary-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-item img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+
+.summary-item h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.summary-item p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #ddd;
+  font-size: 20px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-page {
+    padding: 30px 5%;
+  }
+
+}
+

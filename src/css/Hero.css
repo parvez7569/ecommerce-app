@@ -1,0 +1,323 @@
+/* .hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+  height: auto;
+} */
+/* .hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  display: block;
+} */
+
+/* =========================
+   HERO CAROUSEL
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 780px;
+  overflow: hidden;
+  background: #111;
+}
+
+/* Hero Image */
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  animation: zoomImage 4s ease-in-out;
+}
+
+/* Image zoom animation */
+
+@keyframes zoomImage {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.05)
+  );
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: absolute;
+
+  top: 50%;
+  left: 8%;
+
+  transform: translateY(-50%);
+
+  max-width: 600px;
+
+  color: white;
+
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  margin: 0 0 20px;
+
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  font-size: 20px;
+
+  line-height: 1.6;
+
+  margin: 0 0 30px;
+
+  color: #eeeeee;
+
+  max-width: 500px;
+}
+
+
+/* =========================
+   SHOP BUTTON
+========================= */
+
+.hero-content button {
+  padding: 15px 32px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: white;
+  color: #111;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+  background: #111;
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   ARROW BUTTONS
+========================= */
+
+.hero-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #111;
+
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 3;
+
+  transition: all 0.3s ease;
+}
+
+.hero-arrow:hover {
+  background: white;
+
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+/* Previous */
+
+.prev {
+  left: 25px;
+}
+
+
+/* Next */
+
+.next {
+  right: 25px;
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.hero-dots {
+  position: absolute;
+
+  bottom: 25px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  gap: 10px;
+
+  z-index: 3;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: white;
+
+  opacity: 0.5;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 28px;
+
+  border-radius: 10px;
+
+  opacity: 1;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    height: 500px;
+  }
+
+  .hero-content {
+    left: 7%;
+    max-width: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: 450px;
+  }
+
+  .hero-content {
+    left: 25px;
+    right: 25px;
+
+    max-width: none;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-content button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .hero-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .prev {
+    left: 12px;
+  }
+
+  .next {
+    right: 12px;
+  }
+}

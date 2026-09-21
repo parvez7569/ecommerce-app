@@ -1,0 +1,165 @@
+.contact-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #f4f4f4;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.contact-header p {
+  font-size: 17px;
+  color: #666;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form-container {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.contact-info > p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-item > span {
+  font-size: 25px;
+}
+
+.contact-item h3 {
+  margin: 0 0 5px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* Dark Theme */
+
+body.dark .contact-page {
+  background: #111;
+  color: white;
+}
+
+body.dark .contact-header p {
+  color: #bbb;
+}
+
+body.dark .contact-info,
+body.dark .contact-form-container {
+  background: #222;
+}
+
+body.dark .contact-info > p,
+body.dark .contact-item p {
+  color: #bbb;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+body.dark .form-group input::placeholder,
+body.dark .form-group textarea::placeholder {
+  color: #aaa;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page {
+    padding: 40px 5%;
+  }
+
+  .contact-header h1 {
+    font-size: 32px;
+  }
+}
